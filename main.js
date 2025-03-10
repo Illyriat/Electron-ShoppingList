@@ -6,7 +6,7 @@ const  {app, BrowserWindow, Menu, ipcMain} = electron;
 
 
 // SET ENV to Production. Comment out to be in Dev environment
-process.env.NODE_ENV = 'production';
+// process.env.NODE_ENV = 'production';
 
 let mainWindow;
 let addWindow;
@@ -91,7 +91,19 @@ const mainMenuTemplate = [
                 }
             }
         ]
+    },
+    {
+        label:'About',
+        submenu:[
+            {
+                label:'Website'
+            },
+            {
+                label:'Version'
+            }
+        ]
     }
+
 ];
 
 // If Mac, add empty object to menu
